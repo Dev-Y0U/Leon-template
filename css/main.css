@@ -141,8 +141,42 @@ border-bottom: 1px solid #ddd;
     font-size: 19px;
     line-height: 1.8;
 }
-
-
-
-
 /* end landing page */
+
+/* start features */
+
+.features{
+	padding:60px 0 ;
+	background:#f6f6f6;
+	text-align:center;
+}
+.features h2{
+	font-size: 48px;
+	margin-top: 0;
+	color:var(--main-color);
+}
+.features .container{
+	display:grid;
+	gap:15px;
+	grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+	/* display:flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap; */
+}
+.feat{
+	padding:10px;
+    background:white;
+    color:#000;
+    border-radius:0.8rem;
+    display:flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content:center;
+    box-shadow:-5px 5px 15px 1px rgba(0,0,0,0.1);
+}
+.feat img{
+	width: 50px;
+	margin:20px;
+}
+/* end features */
