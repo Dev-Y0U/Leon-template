@@ -8,7 +8,7 @@
 	box-sizing: border-box;
 }
 body {
-	font-family: 'Work Sans' sans-serif;
+	font-family: 'Work Sans', sans-serif;
 }
 .container {
 	padding: 0 15px;
@@ -175,8 +175,18 @@ border-bottom: 1px solid #ddd;
 	justify-content:center;
     box-shadow:-5px 5px 15px 1px rgba(0,0,0,0.1);
 }
-.feat img{
+.feat svg{
 	width: 50px;
-	margin:20px;
+	margin:10px 20px;
+	fill:var(--main-color);
+}
+.feat h3{
+	font-weight:800;
+	margin: 30px 0;
+}
+.feat p {
+	line-height: 1.8;
+	color:#777;
+	font-size:17px;
 }
 /* end features */
