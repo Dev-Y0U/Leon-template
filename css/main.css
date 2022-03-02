@@ -1,11 +1,13 @@
-/* import work sans font */
+/* start global rules */
 :root{
     --main-color:#10cab7;
+	--secondary-color:#2c4755;
 }
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 body {
 	font-family: 'Work Sans', sans-serif;
@@ -15,24 +17,41 @@ body {
 	margin: 0 auto;
 	
 }
-/* small */
+/* small screens*/
 @media (min-width: 768px) {
 	.container {
 		width: 750px;
 	}
 }
-/* medium */
+/* medium screens*/
 @media (min-width: 992px) {
 	.container {
 		width: 970px;
 	}
 }
+/* Large screens*/
 @media (min-width: 1200px) {
 	.container {
 		width: 1170px;
 	}
 }
 /* end Global Rules */
+
+/* start component */
+.custom-heading{
+	color:#ebeced;
+	font-size:100px;
+	font-weight: 800;
+	letter-spacing: 10px;
+	margin: 0;
+	text-align: center;
+}
+.custom-heading + p{
+	margin:-30px 0 0;
+	font-size: 20px;
+	text-align: center;
+}
+/* end component */
 
 /* start Header */
 header {
@@ -151,13 +170,13 @@ border-bottom: 1px solid #ddd;
 	text-align:center;
 }
 .features h2{
-	font-size: 48px;
-	margin-top: 0;
+	font-size: 80px;
+	margin:  20px 0;
 	color:var(--main-color);
 }
 .features .container{
 	display:grid;
-	gap:15px;
+	gap:25px;
 	grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
 	/* display:flex;
 	align-items: center;
@@ -190,3 +209,50 @@ border-bottom: 1px solid #ddd;
 	font-size:17px;
 }
 /* end features */
+
+/* start services */
+.services-content{
+	display:grid;
+	gap:30px;
+	grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+	margin:100px 0;
+}
+.services-content .srv{
+	display:flex;
+	margin-bottom: 40px;
+}
+@media (max-width:767) {
+	.services-content .srv{
+		flex-direction: column;
+		text-align: center;
+	}
+}
+.services-content .srv i{
+	flex-basis: 60px;
+}
+.services-content .srv text{
+	flex:1;
+}
+.services-content  .image{
+	text-align: center;
+	position: relative;
+}
+.services-content  .image::before{
+	content: " ";
+	position:absolute;
+	right:0;
+	top: -50px;
+	width: 90px;
+	height:calc(100% + 100px);
+	background-color: var(--secondary-color);
+	z-index: -1;
+}
+.services-content  img{
+width: 260px;
+}
+@media (max-width:1199px) {
+	.services-content  .image{
+		display:none;
+	}
+}
+/* end services */
