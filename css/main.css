@@ -261,3 +261,28 @@ width: 260px;
 	}
 }
 /* end services */
+/* start Portfolio */
+.portfolio{
+	padding: var(--section-padding);
+	background: var(--section-color);
+}
+.portfolio-content{
+	display:grid;
+	gap:30px;
+	grid-template-columns: repeat(auto-fill ,minmax(300px,1fr));
+	margin:100px 0;
+}
+.portfolio-content .card{
+	background:#fff;
+}
+.portfolio-content .card img {
+	max-width:100%;
+}
+.portfolio-content .card .info{
+	padding:20px;
+}
+.portfolio-content .info h3{
+	margin:0;
+}
+
+/* end Portfolio */
