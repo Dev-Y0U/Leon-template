@@ -2,6 +2,8 @@
 :root{
     --main-color:#10cab7;
 	--secondary-color:#2c4755;
+	--section-padding:60px 0;
+	--section-color:#f6f6f6;
 }
 * {
 	-webkit-box-sizing: border-box;
@@ -99,7 +101,7 @@ header .links ul {
 	margin: 0;
 	position: absolute;
 	right: 0;
-    background:#f6f6f6;
+    background:var(--section-color);
     min-width:200px;
     top:calc(100% + 15px);
     display:none;
@@ -108,7 +110,7 @@ header .links ul::before {
 	content: ' ';
     border-width: 10px;
     border-style: solid;
-    border-color: transparent transparent #f6f6f6 transparent;
+    border-color: transparent transparent var(--section-color) transparent;
     position: absolute;
     top: -20px;
     right: 5px;
@@ -137,7 +139,7 @@ border-bottom: 1px solid #ddd;
     background-image:url(../images/backround.jpg);
     background-size: cover ;
     background-repeat: no-repeat;
-    height:calc(100vh - 64px);
+    min-height:calc(100vh - 64px);
     position: relative;
     z-index: -10;
 }
@@ -165,8 +167,8 @@ border-bottom: 1px solid #ddd;
 /* start features */
 
 .features{
-	padding:60px 0 ;
-	background:#f6f6f6;
+	padding:var(--section-padding) ;
+	background:var(--section-color);
 	text-align:center;
 }
 .features h2{
@@ -211,6 +213,9 @@ border-bottom: 1px solid #ddd;
 /* end features */
 
 /* start services */
+.services{
+	padding:var(--section-padding);
+}
 .services-content{
 	display:grid;
 	gap:30px;
